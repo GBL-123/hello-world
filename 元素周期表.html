@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>元素周期表</title>
-            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+            <script type="text/javascript" src="./echarts.min.js"></script>
 
 </head>
 <body>
-    <div id="847e505d0d7e43ea915bc1aa4a7f01c1" class="chart-container" style="width:1220px; height:600px;"></div>
+    <div id="19267467a04a43a2b9f73500055c30d7" class="chart-container" style="width:1220px; height:600px;"></div>
     <script>
-        var chart_847e505d0d7e43ea915bc1aa4a7f01c1 = echarts.init(
-            document.getElementById('847e505d0d7e43ea915bc1aa4a7f01c1'), 'white', {renderer: 'canvas'});
-        var option_847e505d0d7e43ea915bc1aa4a7f01c1 = {
+        var chart_19267467a04a43a2b9f73500055c30d7 = echarts.init(
+            document.getElementById('19267467a04a43a2b9f73500055c30d7'), 'white', {renderer: 'canvas'});
+        var option_19267467a04a43a2b9f73500055c30d7 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1265,18 +1265,18 @@
                 "rich": {
                     "an": {
                         "fontSize": 11,
-                        "color": "black",
+                        "color": "red",
                         "textBorderWidth": 0
                     },
                     "s": {
                         "fontSize": 11,
-                        "color": "black",
+                        "color": "red",
                         "textBorderWidth": 0
                     },
                     "n": {
                         "fontSize": 20,
                         "fontWeight": "bold",
-                        "color": "black",
+                        "color": "red",
                         "textBorderWidth": 0
                     }
                 }
@@ -1288,10 +1288,11 @@
                 "axisPointer": {
                     "type": "line"
                 },
-                "showContent": false,
+                "showContent": true,
                 "alwaysShowContent": false,
                 "showDelay": 0,
                 "hideDelay": 100,
+                "formatter": function(params){                    return params.value[4]                },
                 "textStyle": {
                     "fontSize": 14
                 },
@@ -1863,7 +1864,7 @@
         }
     ]
 };
-        chart_847e505d0d7e43ea915bc1aa4a7f01c1.setOption(option_847e505d0d7e43ea915bc1aa4a7f01c1);
+        chart_19267467a04a43a2b9f73500055c30d7.setOption(option_19267467a04a43a2b9f73500055c30d7);
     </script>
 </body>
 </html>
