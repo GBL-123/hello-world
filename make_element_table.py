@@ -191,7 +191,7 @@ def make_scatter3():
 def make_base_scatter1():
     '''设置元素周期表的基本组件'''
     p = (
-        Scatter(init_opts=opts.InitOpts(width="1220px",height="500px"))
+        Scatter(init_opts=opts.InitOpts(width="1220px",height="500px",chart_id="1"))
         .add_xaxis(list(range(1,19)))
         .set_global_opts(
             yaxis_opts=opts.AxisOpts(
@@ -208,7 +208,7 @@ def make_base_scatter1():
                 axistick_opts=opts.AxisTickOpts(is_show=False)
             ),
             title_opts=opts.TitleOpts(
-                title="元素周期表",pos_left="center"
+                title="元素周期表",pos_left="center",subtitle="（点击元素名称可查看详细介绍）"
             ),
             legend_opts=opts.LegendOpts(
                 pos_top="50px"
@@ -268,7 +268,8 @@ base_scatter2 = make_base_scatter2().overlap(make_scatter3())
 
 
 (
-    Grid(init_opts=opts.InitOpts(width="1220px",height="600px",page_title="元素周期表",js_host="./"))
+    Grid(init_opts=opts.InitOpts(
+            width="1220px",height="600px",page_title="元素周期表",js_host="./"))
     .add(base_scatter1,
         grid_opts=opts.GridOpts(
             pos_bottom="160px"
@@ -282,7 +283,14 @@ base_scatter2 = make_base_scatter2().overlap(make_scatter3())
             pos_right="175px"
             )
         )
+    .add_js_funcs(
+        '''
+        var new_element=document.createElement('script');
+        new_element.setAttribute('type','text/javascript');
+        new_element.setAttribute('src','./links.js');
+        document.body.appendChild(new_element);
+        ''')
     .render("元素周期表.html")
 )
 
-# %%
+

@@ -7,11 +7,17 @@
 
 </head>
 <body>
-    <div id="5805e14efdd541e795ed86c8ecb586bb" class="chart-container" style="width:1220px; height:600px;"></div>
+    <div id="1" class="chart-container" style="width:1220px; height:600px;"></div>
     <script>
-        var chart_5805e14efdd541e795ed86c8ecb586bb = echarts.init(
-            document.getElementById('5805e14efdd541e795ed86c8ecb586bb'), 'white', {renderer: 'canvas'});
-        var option_5805e14efdd541e795ed86c8ecb586bb = {
+        var chart_1 = echarts.init(
+            document.getElementById('1'), 'white', {renderer: 'canvas'});
+            
+        var new_element=document.createElement('script');
+        new_element.setAttribute('type','text/javascript');
+        new_element.setAttribute('src','./links.js');
+        document.body.appendChild(new_element);
+        
+        var option_1 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -1829,6 +1835,7 @@
     "title": [
         {
             "text": "\u5143\u7d20\u5468\u671f\u8868",
+            "subtext": "\uff08\u70b9\u51fb\u5143\u7d20\u540d\u79f0\u53ef\u67e5\u770b\u8be6\u7ec6\u4ecb\u7ecd\uff09",
             "left": "center",
             "padding": 5,
             "itemGap": 10
@@ -1864,7 +1871,7 @@
         }
     ]
 };
-        chart_5805e14efdd541e795ed86c8ecb586bb.setOption(option_5805e14efdd541e795ed86c8ecb586bb);
+        chart_1.setOption(option_1);
     </script>
 </body>
 </html>
